@@ -1,1 +1,6 @@
-<p>home works!</p>
+<p>Escribe el texto que se compartirá entre componentes</p>
+<input type="text" name="texto" id="texto">
+
+<div *ngFor="let valor of valoresHijo">
+    <app-mi-texto [textoAHijo]="valor"></app-mi-texto>
+</div>

@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  valoresHijo: any[] = [
+    "Texto 1",
+    "Texto 2",
+    "texto 3",
+    "asdfasdfasdf"
+  ]
+  
 
   constructor() { }
 

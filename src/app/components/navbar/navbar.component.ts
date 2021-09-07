@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  miTexto: string = "Este es mi texto"
+  
   constructor() { }
 
   ngOnInit(): void {
