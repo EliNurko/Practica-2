@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { MiTextoComponent } from './components/mi-texto/mi-texto.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ import { MiTextoComponent } from './components/mi-texto/mi-texto.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule
   ]
 })
 export class HomeModule { }

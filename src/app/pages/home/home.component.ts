@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TextoComponentesService } from 'src/app/services/texto-componentes.service';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  miInput: string = ""
+
   valoresHijo: any[] = [
     "Texto 1",
     "Texto 2",
@@ -14,9 +17,18 @@ export class HomeComponent implements OnInit {
   ]
   
 
-  constructor() { }
+  constructor(
+    private txtSrv: TextoComponentesService
+  ) { }
 
   ngOnInit(): void {
+    this.txtSrv.miTexto.subscribe(data => {
+      this.miInput = data
+    })
+  }
+
+  cambioMiTexto(){
+    this.txtSrv.miTexto.next(this.miInput)
   }
 
 }

@@ -1,6 +1,14 @@
 <p>Escribe el texto que se compartirá entre componentes</p>
-<input type="text" name="texto" id="texto">
+<input type="text" name="texto" id="texto" [(ngModel)]="miInput" (ngModelChange)="cambioMiTexto()">
 
-<div *ngFor="let valor of valoresHijo">
-    <app-mi-texto [textoAHijo]="valor"></app-mi-texto>
+<p>
+    Lo que tiene mi variable "miInput" por 2WB es: {{miInput}}
+</p>
+
+<div class="pt-5">
+    <h5>Recorrido en un arreglo</h5>
+    <div *ngFor="let valor of valoresHijo">
+        <app-mi-texto [textoAHijo]="valor"></app-mi-texto>
+    </div>
 </div>
+|
